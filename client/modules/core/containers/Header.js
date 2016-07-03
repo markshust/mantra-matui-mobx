@@ -4,7 +4,7 @@ import composeWithMobx from '../libs/with_mobx';
 import Header from '../components/Header';
 
 const onPropsChange = ({ context }, onData) => {
-  const { title } = context().Store.header;
+  const { title } = context().State.header;
 
   onData(null, {
     title,
