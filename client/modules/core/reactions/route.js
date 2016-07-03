@@ -7,6 +7,6 @@ export default ({ FlowRouter, Tracker }, actions) => {
     const currentRoute = currentCtx.route;
     const currentName = currentRoute ? currentRoute.name : '';
 
-    actions.header.setTitle(currentName);
+    actions.route.setRootName(currentName);
   });
 };

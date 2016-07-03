@@ -6,7 +6,7 @@ export default {
   actions,
   reactions,
   routes,
-  load(context) {
-    reactions.auth(context);
+  load(_context) {
+    reactions.auth(_context);
   },
 };

@@ -1,13 +1,13 @@
 import actions from './actions';
 import reactions from './reactions';
 import routes from './routes';
-import states from './states';
+import stores from './stores';
 
 export default {
   actions,
   routes,
-  states,
+  stores,
   load(_context, _actions) {
-    reactions.header(_context, _actions);
+    reactions.route(_context, _actions);
   },
 };

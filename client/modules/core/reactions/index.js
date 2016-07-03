@@ -1,5 +1,5 @@
-import header from './header';
+import route from './route';
 
 export default {
-  header,
+  route,
 };
