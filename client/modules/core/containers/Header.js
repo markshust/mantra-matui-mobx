@@ -1,15 +1,17 @@
-import { useDeps, compose, composeAll } from 'mantra-core';
+import { useDeps, composeAll } from 'mantra-core';
+import { observer } from 'mobx-react';
+import composeWithMobx from '../libs/with_mobx';
 import Header from '../components/Header';
 
 const onPropsChange = ({ context }, onData) => {
-  const { State } = context();
-  console.log('updating', State.header.title);
+  const { title } = context().Store.header;
+
   onData(null, {
-    title: State.header.title,
+    title,
   });
 };
 
 export default composeAll(
-  compose(onPropsChange),
+  composeWithMobx(onPropsChange),
   useDeps(),
-)(Header);
+)(observer(Header));

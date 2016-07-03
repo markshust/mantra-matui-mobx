@@ -1,5 +1,4 @@
 import React from 'react';
-import { observer } from 'mobx-react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 import theme from '../libs/theme';
@@ -20,4 +19,4 @@ MainLayout.propTypes = {
   content: React.PropTypes.any.isRequired,
 };
 
-export default observer(MainLayout);
+export default MainLayout;

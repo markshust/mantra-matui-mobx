@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { observer } from 'mobx-react';
 import { Template } from 'meteor/templating';
 import { Blaze } from 'meteor/blaze';
 
@@ -20,4 +19,4 @@ class AccountsUi extends Component {
   }
 }
 
-export default observer(AccountsUi);
+export default AccountsUi;

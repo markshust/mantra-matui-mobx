@@ -1,5 +1,4 @@
 import React from 'react';
-import { observer } from 'mobx-react';
 import FlatButton from 'material-ui/FlatButton';
 
 import Logout from '/client/modules/auth/containers/Logout';
@@ -38,4 +37,4 @@ const Home = () => (
   </div>
 );
 
-export default observer(Home);
+export default Home;

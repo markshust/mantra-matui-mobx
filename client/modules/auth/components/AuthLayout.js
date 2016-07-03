@@ -1,5 +1,4 @@
 import React from 'react';
-import { observer } from 'mobx-react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 import theme from '/client/modules/core/libs/theme';
@@ -16,4 +15,4 @@ AuthLayout.propTypes = {
   content: React.PropTypes.any.isRequired,
 };
 
-export default observer(AuthLayout);
+export default AuthLayout;

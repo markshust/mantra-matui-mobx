@@ -1,5 +1,4 @@
 import React, { PropTypes } from 'react';
-import { observer } from 'mobx-react';
 import FlatButton from 'material-ui/FlatButton';
 
 const Logout = ({ onClick }) => (
@@ -10,4 +9,4 @@ Logout.propTypes = {
   onClick: PropTypes.func,
 };
 
-export default observer(Logout);
+export default Logout;
