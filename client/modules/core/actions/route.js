@@ -3,6 +3,6 @@ import { action } from 'mobx';
 
 export default {
   setRootName: action(({ Store }, title) => {
-    Store.route.rootName = routeRootName(title);
+    Store.core.route.rootName = routeRootName(title);
   }),
 };

@@ -1,5 +1,7 @@
 import route from './route';
 
 export default {
-  route,
+  core: {
+    route,
+  },
 };
