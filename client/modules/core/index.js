@@ -7,7 +7,7 @@ export default {
   actions,
   routes,
   states,
-  load(context) {
-    reactions.header(context, actions);
+  load(_context, _actions) {
+    reactions.header(_context, _actions);
   },
 };

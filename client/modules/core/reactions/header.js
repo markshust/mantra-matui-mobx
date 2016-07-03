@@ -1,6 +1,4 @@
-export default (context, actions) => {
-  const { FlowRouter, Tracker } = context;
-
+export default ({ FlowRouter, Tracker }, actions) => {
   // Redirect to login if user isn't authenticated and on auth route
   Tracker.autorun(() => {
     FlowRouter.watchPathChange();
@@ -9,6 +7,6 @@ export default (context, actions) => {
     const currentRoute = currentCtx.route;
     const currentName = currentRoute ? currentRoute.name : '';
 
-    actions.header.setTitle(context, currentName);
+    actions.header.setTitle(currentName);
   });
 };
