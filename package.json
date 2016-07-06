@@ -20,7 +20,8 @@
     },
     "parser": "babel-eslint",
     "rules": {
-      "no-param-reassign": [0]
+      "no-param-reassign": [0],
+      "react/jsx-no-bind": [0]
     }
   },
   "dependencies": {
@@ -33,7 +34,8 @@
     "react-dom": "^15.2.0",
     "react-komposer": "^1.11.0",
     "react-mounter": "^1.2.0",
-    "react-tap-event-plugin": "^1.0.0"
+    "react-tap-event-plugin": "^1.0.0",
+    "roboto-fontface": "^0.5.0"
   },
   "devDependencies": {
     "babel-eslint": "^6.1.0",
