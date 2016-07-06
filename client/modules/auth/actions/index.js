@@ -1,5 +1,5 @@
-import auth from './auth';
+import logout from './logout';
 
 export default {
-  auth,
+  logout,
 };

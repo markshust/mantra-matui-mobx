@@ -3,6 +3,7 @@ import { mount } from 'react-mounter';
 
 import MainLayout from './components/MainLayout';
 import Home from './components/Home';
+import Foo from '/client/modules/foo/components/Foo';
 
 export default function (injectDeps, { FlowRouter }) {
   const MainLayoutCtx = injectDeps(MainLayout);
@@ -17,11 +18,11 @@ export default function (injectDeps, { FlowRouter }) {
     },
   });
 
-  authRoutes.route('/other', {
-    name: 'other',
+  authRoutes.route('/foo', {
+    name: 'foo',
     action() {
       mount(MainLayoutCtx, {
-        content: () => (<Home />),
+        content: () => (<Foo />),
       });
     },
   });

@@ -1,22 +1,23 @@
 import { useDeps, composeAll } from 'mantra-core';
 import composeWithMobx from '../libs/with_mobx';
-import Header from '../components/Header';
+import SideNav from '../components/SideNav';
 
 const onPropsChange = ({ context }, onData) => {
-  const { rootName } = context().Store.core.route;
+  const { open } = context().Store.core.sideNav;
 
   onData(null, {
-    title: rootName,
+    open,
   });
 };
 
 const depsMapper = (context, actions) => ({
-  onLeftIconButtonTouchTap: actions.sideNav.toggle,
-  onLogoutTouchTap: actions.sideNav.logout,
+  onHomeTouchTap: actions.sideNav.homeTouchTap,
+  onRequestChange: actions.sideNav.toggle,
+  onFooTouchTap: actions.sideNav.fooTouchTap,
   context: () => context,
 });
 
 export default composeAll(
   composeWithMobx(onPropsChange),
   useDeps(depsMapper),
-)(Header);
+)(SideNav);

@@ -6,10 +6,10 @@ const style = {
   },
 };
 
-const Home = () => (
+const Foo = () => (
   <div style={style.base}>
-    <p>You are at /home.</p>
+    <p>You are at /foo.</p>
   </div>
 );
 
-export default Home;
+export default Foo;
