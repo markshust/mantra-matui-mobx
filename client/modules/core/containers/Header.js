@@ -3,16 +3,16 @@ import composeWithMobx from '../libs/with_mobx';
 import Header from '../components/Header';
 
 const onPropsChange = ({ context }, onData) => {
-  const { rootName } = context().Store.core.route;
+  const { title } = context().Store.core.route;
 
   onData(null, {
-    title: rootName,
+    title,
   });
 };
 
 const depsMapper = (context, actions) => ({
   onLeftIconButtonTouchTap: actions.sideNav.toggle,
-  onLogoutTouchTap: actions.sideNav.logout,
+  onLogoutTouchTap: actions.header.logout,
   context: () => context,
 });
 

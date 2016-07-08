@@ -1,5 +1,5 @@
 export default {
-  exec: ({ Meteor }) => {
+  logout: ({ Meteor }) => {
     Meteor.logout();
   },
 };

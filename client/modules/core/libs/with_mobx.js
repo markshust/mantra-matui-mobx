@@ -3,11 +3,11 @@ import { autorun } from 'mobx';
 
 export default function composeWithMobx(fn, L, E, options) {
   const onPropsChange = (props, onData) => {
-    const processState = () => fn(props, onData);
+    const reactiveFn = () => fn(props, onData);
 
-    processState();
+    autorun(reactiveFn);
 
-    autorun(processState);
+    return reactiveFn();
   };
 
   return compose(onPropsChange, L, E, options);

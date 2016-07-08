@@ -4,9 +4,7 @@ export default ({ FlowRouter, Tracker }, actions) => {
     FlowRouter.watchPathChange();
 
     const currentCtx = FlowRouter.current();
-    const currentRoute = currentCtx.route;
-    const currentName = currentRoute ? currentRoute.name : '';
 
-    actions.route.setRootName(currentName);
+    actions.route.setCurrent(currentCtx.route);
   });
 };
